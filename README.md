@@ -1,12 +1,12 @@
 # AngularAppstore
 
-Javascript Training project.
+Angular-JS training project.
 
 DEMO
 
 Mini-appstore made in AngularJS.
 
-Stack:
+<b>Stack:</b>
 
 AngularJS/HTML5/SASS.
 Polymer/Bootstrap 3/Animations.
