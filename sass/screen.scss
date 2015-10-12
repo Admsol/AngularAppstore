@@ -4,3 +4,57 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+}
+
+.p_pageTitle {
+	text-align: center;
+	font-size: 50px;
+	position: absolute;
+	top: 250px;
+	left: 900px;
+	p {
+		font-size: 25px;
+	}
+}
+
+.p_handImage {
+	width: 900px;
+}
+
+.p_secondBloc_title {
+	text-align: center;
+	font-size: 50px;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+.p_appImg {
+	width: 150px;
+	border-radius: 20%;
+	margin-top: 30px;
+	box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.75);
+	border: 1px solid white;
+}
+
+.p_appPrincipal {
+	text-align: center;
+	h2 {
+		margin-top: 20px;
+		font-weight: 400;
+	}
+	p {
+		padding-left: 50px;
+		padding-right: 50px;
+		padding-top: 10px;
+	}
+	paper-button {
+		margin-top: 15px;
+	}
+}
+.p_appRow
+{
+	margin-top: 40px;
+}

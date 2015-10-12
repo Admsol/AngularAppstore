@@ -8,33 +8,64 @@
 <!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>[INSERT SITE TITLE HERE]</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AngularJS website">
-    <meta name="author" content="pkumkovs">
-	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>AngularAppstore</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="AngularJS website">
+	<meta name="author" content="pkumkovs">
+
+	<!--Stylesheets-->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-	
-	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="stylesheets/screen.css" rel="stylesheet" type="text/css" />
+
+	<!--GoogleFonts-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+	<!--Helpers-->
+	<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
 
 
 </head>
 
 <body>
+	<!--Header Bloc-->
+	<div class="p_pageTitle">
+		<h1>Appstoregen.</h1>
+		<p>Building a next-gen appstore.</p>
+	</div>
+	<img class="p_handImage" src="img/smartphoneGirl.png">
 
-    <!--[if IE]>
-        <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<h1 class="p_secondBloc_title">Check out our apps</h1>
 
-    <!-- Start coding here -->
-	
-	
+	<div class="text-center">
+		<paper-button raised type="button" class="btn p_secondBlocAddApp ">Generate an App</paper-button>
+	</div>
 
-
-    <!-- Coding End -->
+	<div class="row p_appRow">
+		<div class="col-xs-4 p_appPrincipal">
+			<img class="p_appImg center-block" src="http://lorempixel.com/400/400/">
+			<h2>1#: Brand New App</h2>
+			<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
+			<paper-button raised type="button" class="btn btn-success p_secondBlocAddApp ">Likes: 0</paper-button>
+			
+		</div>
+	<div class="col-xs-4 p_appPrincipal">
+			<img class="p_appImg center-block" src="http://lorempixel.com/400/400/">
+			<h2>1#: Brand New App</h2>
+			<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
+			<paper-button raised type="button" class="btn btn-success p_secondBlocAddApp ">Likes: 0</paper-button>
+			
+		</div><div class="col-xs-4 p_appPrincipal">
+			<img class="p_appImg center-block" src="http://lorempixel.com/400/400/">
+			<h2>1#: Brand New App</h2>
+			<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
+			<paper-button raised type="button" class="btn btn-success p_secondBlocAddApp ">Likes: 0</paper-button>
+			
+		</div>
+	</div>
 
 
 </body>

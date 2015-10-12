@@ -6,10 +6,13 @@ DEMO
 
 Mini-appstore made in AngularJS.
 
+
 <b>Stack:</b>
 
 AngularJS/HTML5/SASS.
-Polymer/Bootstrap 3/Animations.
+<br>
+Bootstrap 3/Animations.
+<br>
 Constructor & Factory Pattern.
 
 License: MIT.
