@@ -26,48 +26,44 @@
 	<!--Helpers-->
 	<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
 	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<script src="bower_components/angular/angular.min.js"></script>
+
+	<!--Javascript-->
+	<script src="js/app.js"></script>
+	<script src="js/controllers/mainController.js"></script>
 
 
 </head>
 
-<body>
-	<!--Header Bloc-->
-	<div class="p_pageTitle">
-		<h1>Appstoregen.</h1>
-		<p>Building a next-gen appstore.</p>
-	</div>
-	<img class="p_handImage" src="img/smartphoneGirl.png">
+<body ng-app="appstoreApp">
 
-	<h1 class="p_secondBloc_title">Check out our apps</h1>
-
-	<div class="text-center">
-		<paper-button raised type="button" class="btn p_secondBlocAddApp ">Generate an App</paper-button>
-	</div>
-
-	<div class="row p_appRow">
-		<div class="col-xs-4 p_appPrincipal">
-			<img class="p_appImg center-block" src="http://lorempixel.com/400/400/">
-			<h2>1#: Brand New App</h2>
-			<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
-			<paper-button raised type="button" class="btn btn-success p_secondBlocAddApp ">Likes: 0</paper-button>
-			
+	<div ng-controller="appController">
+		<!--Header Bloc-->
+		<div class="p_pageTitle">
+			<h1>Appstoregen.</h1>
+			<p>Building a next-gen appstore.</p>
 		</div>
-	<div class="col-xs-4 p_appPrincipal">
-			<img class="p_appImg center-block" src="http://lorempixel.com/400/400/">
-			<h2>1#: Brand New App</h2>
-			<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
-			<paper-button raised type="button" class="btn btn-success p_secondBlocAddApp ">Likes: 0</paper-button>
-			
-		</div><div class="col-xs-4 p_appPrincipal">
-			<img class="p_appImg center-block" src="http://lorempixel.com/400/400/">
-			<h2>1#: Brand New App</h2>
-			<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
-			<paper-button raised type="button" class="btn btn-success p_secondBlocAddApp ">Likes: 0</paper-button>
-			
+		<img class="p_handImage" src="img/smartphoneGirl.png">
+
+		<h1 class="p_secondBloc_title">Check out our apps</h1>
+
+		<div class="text-center">
+			<paper-button raised type="button" class="btn p_secondBlocAddApp" ng-click="generateApp()">Generate an App</paper-button>
 		</div>
+
+		<div class="row p_appRow">
+			<div class="col-xs-4 p_appPrincipal" ng-repeat="app in appDB">
+
+				<img class="p_appImg center-block" ng-src="{{app.img}}">
+				<h2>{{app.number}}#: Brand New App.</h2>
+				<p>Likes: {{app.likes}}</p>
+				<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
+				<paper-button ng-click="like($index)" raised type="button" class="btn btn-success p_secondBlocAddApp ">Like</paper-button>
+
+			</div>
+		</div>
+
 	</div>
-
-
 </body>
 
 </html>
