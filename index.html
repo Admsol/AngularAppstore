@@ -26,7 +26,9 @@
 	<!--Helpers-->
 	<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
 	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<script src="bower_components/chance/dist/chance.min.js"></script>
 	<script src="bower_components/angular/angular.min.js"></script>
+
 
 	<!--Javascript-->
 	<script src="js/app.js"></script>
@@ -56,17 +58,17 @@
 			<div class="col-xs-4 p_appPrincipal" ng-repeat="app in appDB">
 
 				<img class="p_appImg center-block" ng-src="{{app.img}}">
-				<h2>{{app.number}}#: Brand New App.</h2>
+				<h2>{{app.number}}#: {{app.name}}.</h2>
 				<p>Likes: {{app.likes}}</p>
 				<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
-				<app-desc info="{{app.number}}"></app-desc>
-				
-				<paper-button ng-click="like($index)" raised type="button" class="btn btn-success p_secondBlocAddApp ">Like</paper-button> 
+				<app-desc info="app"></app-desc>
+
+				<paper-button ng-click="like($index)" raised type="button" class="btn btn-success p_secondBlocAddApp ">Like</paper-button>
 
 			</div>
 		</div>
-		
-		
+
+
 	</div>
 </body>
 

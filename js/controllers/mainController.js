@@ -13,8 +13,11 @@ app.controller('appController', ['$scope', function ($scope) {
 	$scope.generateApp = function () {
 		console.log("Click");
 		$scope.counter++;
+		
+		$scope.ranname = chance.name();
 
 		var element = {
+			name: $scope.ranname + " app",
 			number: $scope.counter,
 			likes: 0,
 			img: "http://lorempixel.com/400/400/sports/" + $scope.counter + "/"

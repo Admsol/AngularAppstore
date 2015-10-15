@@ -1,7 +1,9 @@
 app.directive('appDesc', function () {
 	return	{
 		restrict: 'E',
-		scope: { app: '=info' },
+		scope: { 
+			myApp: '=info' 
+		},
 		templateUrl: 'js/directives/appDesc.html'
 	};
 });
