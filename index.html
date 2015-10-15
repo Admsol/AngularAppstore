@@ -1,0 +1,75 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>AngularAppstore</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="AngularJS website">
+	<meta name="author" content="pkumkovs">
+
+	<!--Stylesheets-->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="stylesheets/screen.css" rel="stylesheet" type="text/css" />
+
+	<!--GoogleFonts-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+	<!--Helpers-->
+	<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+	<link rel="import" href="bower_components/paper-button/paper-button.html">
+	<script src="bower_components/chance/dist/chance.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+
+
+	<!--Javascript-->
+	<script src="js/app.js"></script>
+	<script src="js/controllers/mainController.js"></script>
+	<script src="js/directives/mainDirective.js"></script>
+
+
+</head>
+
+<body ng-app="appstoreApp">
+
+	<div ng-controller="appController">
+		<!--Header Bloc-->
+		<div class="p_pageTitle">
+			<h1>Appstoregen.</h1>
+			<p>Building a next-gen appstore.</p>
+		</div>
+		<img class="p_handImage" src="img/smartphoneGirl.png">
+
+		<h1 class="p_secondBloc_title">Check out our apps</h1>
+
+		<div class="text-center">
+			<paper-button raised type="button" class="btn p_secondBlocAddApp" ng-click="generateApp()">Generate an App</paper-button>
+		</div>
+
+		<div class="row p_appRow">
+			<div class="col-xs-4 p_appPrincipal" ng-repeat="app in appDB">
+
+				<img class="p_appImg center-block" ng-src="{{app.img}}">
+				<h2>{{app.number}}#: {{app.name}}.</h2>
+				<p>Likes: {{app.likes}}</p>
+				<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound. </p>
+				<app-desc info="app"></app-desc>
+
+				<paper-button ng-click="like($index)" raised type="button" class="btn btn-success p_secondBlocAddApp ">Like</paper-button>
+
+			</div>
+		</div>
+
+
+	</div>
+</body>
+
+</html>
