@@ -2,17 +2,16 @@
 
 Angular-JS training project.
 
-DEMO
+<a href="http://admsol.github.io/AngularAppstore/">DEMO</a>
 
 Mini-appstore made in AngularJS.
 
 
 <b>Stack:</b>
 
-AngularJS/HTML5/SASS.
-<br>
-Bootstrap 3/Animations.
-<br>
-Constructor & Factory Pattern.
+ - AngularJS/HTML5/SASS.
+- Bootstrap 3/Animations.
+- Constructor & Factory Pattern.
 
 License: MIT.
+
